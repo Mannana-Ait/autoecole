@@ -84,7 +84,7 @@ public class UserServiceImpl implements UserService {
     if (foundedUserByUsername != null || foundedUserByEmail != null) return null;
     else {
     if (user.getPassword() == null || user.getPassword().isEmpty()) {
-    user.setPassword(bCryptPasswordEncoder.encode(user.getUsername()));
+    user.setPassword(bCryptPasswordEncoder.encode("123"));
     }
     else {
     user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
